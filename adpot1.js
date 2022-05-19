@@ -1,0 +1,1 @@
+document.getElementById("result").innerHTML = localStorage.getItem("passValue");

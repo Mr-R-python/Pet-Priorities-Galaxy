@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="adoption.css">
+</head>
+<body>
+    <section class="contact" >
+
+        <h1 class="heading">Adoption Form</h1>
+    
+        <div class="row">
+    
+            <form id="adoption" onsubmit="sendEmail2()"  action="">
+                <div class="alert">Successfully Submitted Your Details</div>
+               
+                <textarea class="pname" id="result"></textarea>
+                <div class="inputBox">
+                    <input type="name" id="name" required>
+                    <label>name</label>
+                </div> 
+                <div class="inputBox">
+                    <input type="email" id="email" required>
+                    <label>email</label>
+                </div>
+                <div class="inputBox">
+                    <input type="tel" id="number" minlength="10" maxlength="10" required>
+                    <label>number</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="address" required>
+                    <label>address</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="landmark" required>
+                    <label>Landmark</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="pincode" minlength="6" maxlength="6"  required>
+                    <label>pincode</label>
+                </div>
+                
+    
+                <input type="submit" class="btn" onclick="sendEmail1()" value="Submit">
+    
+            </form>
+    
+
+    
+        </div>
+    
+    </section>
+    
+   
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="adpot1.js"></script>
+    <script src="adoption.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        function sendEmail1(){
+            Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "rishabh1175@gmail.com",
+    Password : "8CBF9EA561BA4E884CD6E5198E6CDBD58A7C",
+    To : document.getElementById("email").value,
+    From : "rishabh1175@gmail.com",
+    Subject : "Thanking You",
+    Body : "Dear" + document.getElementById("name").value
+        + "<br><br> Thankyou for Adopting a Pet." 
+   
+    }) }
+    </script>
+
+<script>
+    function sendEmail2(){
+        Email.send({
+Host : "smtp.elasticemail.com",
+Username : "rishabh1175@gmail.com",
+Password : "8CBF9EA561BA4E884CD6E5198E6CDBD58A7C",
+To : document.getElementById("email").value,
+From : "rishabh1175@gmail.com",
+Subject : "Your Adopion Details",
+Body : "Dear"  + document.getElementById("name").value + ","
+    + "<br> You have adopted a pet named"+ document.getElementById("result").value +"."
+    + "<br> Your adopted pet will be delivered to you within 4-5 business days." 
+    +"<br> Your name:"+ document.getElementById("name").value
+    +"<br> Email:"+ document.getElementById("email").value
+    +"<br> Mob No.:"+ document.getElementById("number").value
+    +"<br> Address:"+ document.getElementById("address").value
+    +"<br> Landmark"+ document.getElementById("landmark").value
+    +"<br> Pincode:"+ document.getElementById("pincode").value
+
+
+}) }
+</script>
+   
+
+</body>
+</html>
