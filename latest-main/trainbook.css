@@ -1,0 +1,247 @@
+:root{
+    --black:#192a56;
+    --orange:#F95F1D;
+    --yellow:pink;
+    }
+    
+    *{
+    font-family: 'Times New Roman', Times, serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; 
+    text-transform: capitalize;
+    transition: .2s linear;
+    
+    }
+    
+    html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    }
+    
+    
+    
+    section{
+    padding:0 7%;
+    padding-top: 7.5rem;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+    }
+    
+    .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.7rem 2.5rem;
+    font-size: 1.7rem;
+    color:var(--yellow);
+    cursor: pointer;
+    background:orange;
+    color: brown;
+    border:1px solid goldenrod;
+    }
+    
+    
+    
+    .heading{
+    text-align: center;
+    color:var(--black);
+    padding:1rem;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    }
+    
+    header{
+    position: fixed;
+    top:0; left:0;
+    width:100%;
+    z-index: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 7%;
+    background:lightgrey;
+    z-index: 1000;
+    font-weight: bold;
+    }
+    
+    header .logo{
+    font-size: 2.5rem;
+    color:black;
+    font-weight: bolder;
+    }
+    
+    header .navbar a{
+    font-size: 2rem;
+    margin-left: 2.5rem;
+    color:blue;
+    }
+    
+    header .navbar a:hover{
+    color:darkorange;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .team{
+    background:var(--yellow);
+    }
+    
+    .team .heading{
+    color:#000;
+    }
+    
+    .team .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+    
+    .team .box-container .box{
+    width:30%;
+    background:#fff;
+    position: relative;
+    margin:1rem;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    }
+    
+    .team .box-container .box img{
+    height:10rem;
+    width:10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+    
+    .team .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--black);
+    }
+    
+    .team .box-container .box span{
+    font-size: 1.5rem;
+    color:var(--orange);
+    }
+    
+    .team .box-container .box p{
+    padding:0 2.5rem;
+    font-size: 1.3rem;
+    color:#666;
+    }
+    
+    .team .box-container .box .share{
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    background:var(--orange);
+    display: flex;
+    justify-content: center;
+    }
+    
+    .team .box-container .box .share a{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    color:blue;
+    font-size: 1.7rem;
+    }
+    
+    .team .box-container .box .share a:hover{
+    background:#fff;
+    color:var(--black);
+    }
+    
+    
+    
+    .contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    }
+    
+    .contact .row form{
+    flex:1 1 40rem;
+    padding:2rem;
+    }
+    
+    .contact .row .map{
+    flex:1 1 40rem;
+    width:100%;
+    }
+    
+    .contact .row form .inputBox{
+    position: relative;
+    }
+    
+    .contact .row form .inputBox input, .contact .row form .inputBox textarea{
+    width: 100%;
+    margin:1.5rem 0;
+    padding:.7rem 1rem;
+    font-size: 1.7rem;
+    text-transform: none;
+    }
+    
+    .contact .row form .inputBox textarea{
+    height: 15rem;
+    resize: none;
+    }
+    
+    .contact .row form .inputBox label{
+    font-size: 1.5rem;
+    position: absolute;
+    top:2.5rem; left:1rem;
+    color:#444;
+    }
+    
+    .contact .row form .inputBox input:focus ~ label,
+    .contact .row form .inputBox textarea:focus ~ label,
+    .contact .row form .inputBox input:valid ~ label,
+    .contact .row form .inputBox textarea:valid ~ label{
+    top:-.7rem; left:0;
+    color:var(--orange);
+    }
+    
+    a.btn {
+      border-radius: 20px;
+    }
+    
+    select#time {
+      width: 100%;
+      height: 36px;
+      font-size: 18px;
+      color: #666;
+    }
+    select#pet {
+        width: 100%;
+        height: 36px;
+        font-size: 18px;
+        color: #666;
+      }
+    select#service {
+        width: 100%;
+        height: 36px;
+        font-size: 18px;
+        color: #666;
+      }
+    
+    .alert{
+      width: 100%;
+      background: rgb(0, 255, 106);
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 900;
+      display: none;
+    }
+    
